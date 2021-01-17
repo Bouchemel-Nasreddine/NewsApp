@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreferencesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settingBackBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/back"
+            app:backgroundTint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/apply"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:text="@string/apply"
+            android:textColor="@color/purple_500"
+            android:textSize="8sp"
+            app:backgroundTint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reset"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/reset"
+            android:textColor="@color/purple_500"
+            android:textSize="8sp"
+            app:backgroundTint="@color/white" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/section"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/section_spinner"
+        app:layout_constraintTop_toBottomOf="@id/settingToolbar" />
+
+    <Spinner
+        android:id="@+id/section_spinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:entries="@array/sections"
+        app:layout_constraintLeft_toRightOf="@id/section"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settingToolbar" />
+
+    <TextView
+        android:id="@+id/page_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/page_size"
+        app:layout_constraintBottom_toTopOf="@id/from_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/section_spinner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:hint="100"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@id/from_date"
+        app:layout_constraintLeft_toRightOf="@id/section"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/from_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from_date"
+        app:layout_constraintBottom_toBottomOf="@id/datePickerView1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/section_spinner"
+        app:layout_constraintTop_toTopOf="@id/datePickerView1" />
+
+    <TextView
+        android:id="@+id/datePickerView1"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectanlge"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/to_date"
+        app:layout_constraintLeft_toRightOf="@id/section"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_size"
+        tools:text="27/10/2012" />
+
+    <TextView
+        android:id="@+id/to_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_date"
+        app:layout_constraintBottom_toBottomOf="@id/datePickerView2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/page_size"
+        app:layout_constraintTop_toTopOf="@id/datePickerView2" />
+
+    <TextView
+        android:id="@+id/datePickerView2"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectanlge"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/section"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datePickerView1"
+        tools:text="27/10/2012" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

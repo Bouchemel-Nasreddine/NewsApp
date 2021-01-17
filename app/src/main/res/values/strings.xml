@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">News App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="unknown">unknown</string>
+    <string name="read_more_here">read more here!</string>
+    <string name="relevance">relevance</string>
+    <string name="page_size">page-size: </string>
+    <string name="from_date">from-date: </string>
+    <string name="to_date">to-date: </string>
+    <string name="section">section: </string>
+    <string name="environment">Environment</string>
+    <string name="science">Science</string>
+    <string name="football">Football</string>
+    <string name="business">Business</string>
+    <string name="all">search</string>
+    <string name="apply">apply</string>
+    <string name="reset">reset</string>
+    <string name="no_news">there is no news matching the current preferences</string>
+    <string name="no_int">there is no Internet Connection</string>
+
+    <string-array name="sections">
+        <item>@string/all</item>
+        <item>@string/environment</item>
+        <item>@string/science</item>
+        <item>@string/football</item>
+        <item>@string/business</item>
+    </string-array>
+
+</resources>
